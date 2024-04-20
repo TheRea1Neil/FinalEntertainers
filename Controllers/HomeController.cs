@@ -66,5 +66,18 @@ namespace FinalEntertainers.Controllers
            
         }
 
+        [HttpPost]
+       
+        public IActionResult DeleteEntertainer(int id)
+        {
+            var entertainer = _repo.GetEntertainerById(id);
+            if (entertainer != null)
+            {
+                _repo.DeleteEntertainer(entertainer);  // Assume repository has a DeleteEntertainer method
+                _repo.SaveChanges();
+            }
+            return RedirectToAction("Entertainers");
+        }
+
     }
 }

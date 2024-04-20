@@ -34,5 +34,10 @@ namespace FinalEntertainers.Models
         {
             _context.Update(entertainer);  // Simplified update using DbContext.Update()
         }
+
+        public void DeleteEntertainer(Entertainer entertainer)
+        {
+            _context.Entertainers.Remove(entertainer);
+        }
     }
 }

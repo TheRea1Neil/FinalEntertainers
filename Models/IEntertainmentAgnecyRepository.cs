@@ -9,5 +9,7 @@
 
         Entertainer GetEntertainerById(int entertainerId);
         void UpdateEntertainer(Entertainer entertainer);
+
+        void DeleteEntertainer(Entertainer entertainer);
     }
 }
