@@ -1,7 +1,17 @@
+using FinalEntertainers.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<EntertainmentAgencyExampleContext>(options =>
+{
+    options.UseSqlite(builder.Configuration["ConnectionStrings:Connection"]);
+});
+
+builder.Services.AddScoped<IEntertainmentAgnecyRepository, EFEntertainmentAgancyRepository>();
 
 var app = builder.Build();
 
