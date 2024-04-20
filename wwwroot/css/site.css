@@ -20,3 +20,52 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+
+.jumbotron {
+    background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+    margin-bottom: 30px;
+    border-radius: 0.3rem;
+    color: #fff; /* Ensure text is white for better visibility */
+}
+
+.bg-custom {
+    background-color: #004D40; /* A deep teal background */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #f8f9fa; /* Light text for contrast */
+    transition: color 0.3s ease-in-out;
+}
+
+    .navbar-dark .navbar-nav .nav-link:hover,
+    .navbar-dark .navbar-nav .nav-link:focus {
+        color: #1DE9B6; /* A lighter teal color on hover */
+        text-decoration: none;
+    }
+
+
+
+.catcontainer {
+    background-color: #fff; /* Change as per your theme color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 10px rgba(0,0,0,.1); /* subtle shadow for depth */
+}
+
+.btn-info, .btn-primary {
+    width: 100%; /* full width buttons for better mobile interaction */
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f5f5f5; /* hover effect for table rows */
+}
+
+thead.thead-dark th {
+    background-color: #343a40; /* Bootstrap dark theme for headers */
+    color: #ffffff;
+}
+
+.display-4, h2 {
+    color: #333; /* subtle text color for headings */
+}

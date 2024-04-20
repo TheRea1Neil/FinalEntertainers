@@ -2,9 +2,26 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+   
+}
+
+<div class="jumbotron text-center bg-primary text-white">
+    <h1>Welcome to Our Entertainment Agency!</h1>
+    <p>This is your one-stop shop to find the best entertainers in your area.</p>
 </div>
 
-<a class="btn btn-success" asp-action="Entertainers">View entertainers</a>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2>Find the Perfect Entertainer for Your Occasion</h2>
+            <p>Follow the link below to explore our directory of talented professionals.</p>
+            <a class="btn btn-success btn-lg" asp-action="Entertainers">View entertainers</a>
+        </div>
+    </div>
+</div>
+
+
+
+
