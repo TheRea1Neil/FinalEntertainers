@@ -6,5 +6,8 @@
 
         void AddEntertainer(Entertainer entertainer);
         void SaveChanges();
+
+        Entertainer GetEntertainerById(int entertainerId);
+        void UpdateEntertainer(Entertainer entertainer);
     }
 }

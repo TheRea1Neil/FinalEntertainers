@@ -42,5 +42,29 @@ namespace FinalEntertainers.Controllers
             
          
         }
+
+        [HttpGet]
+        public IActionResult Details(int id)
+        {
+            var entertainer = _repo.GetEntertainerById(id);
+            if (entertainer == null)
+            {
+                return NotFound();
+            }
+            return View(entertainer);
+        }
+
+        [HttpPost]
+        
+        public IActionResult Details(Entertainer entertainer)
+        {
+           
+                _repo.UpdateEntertainer(entertainer);  // Assumes UpdateEntertainer is a method in your repository for updating an entertainer
+                _repo.SaveChanges();
+                return View(entertainer);  // Redirect to a safe page after update
+            
+           
+        }
+
     }
 }

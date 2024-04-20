@@ -5,9 +5,9 @@
 }
 @model Entertainer
 
-<h1>Add Entertainer</h1>
+<h1>Edit Entertainer Details</h1>
 
-<form method="post">
+<form asp-controller="Home" asp-action="Details" method="post">
     <input type="hidden" asp-for="EntertainerId" />
 
     <label asp-for="EntStageName">Stage Name:</label>
@@ -39,7 +39,7 @@
     <br />
 
     <label asp-for="EntWebPage">Web Page:</label>
-    <input asp-for="EntWebPage"/>
+    <input asp-for="EntWebPage" />
     <br />
 
     <label asp-for="EntEmailAddress">Email Address:</label>
@@ -50,5 +50,5 @@
     <input asp-for="DateEntered" type="date" />
     <br />
 
-    <button type="submit">Submit Entertainer</button>
+    <button type="submit">Update Entertainer</button>
 </form>

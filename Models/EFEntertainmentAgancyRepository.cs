@@ -1,4 +1,5 @@
-﻿using SQLitePCL;
+﻿using Microsoft.EntityFrameworkCore;
+using SQLitePCL;
 
 namespace FinalEntertainers.Models
 {
@@ -22,6 +23,16 @@ namespace FinalEntertainers.Models
         public void SaveChanges()
         {
             _context.SaveChanges();
+        }
+
+        public Entertainer GetEntertainerById(int entertainerId)
+        {
+            return _context.Entertainers.FirstOrDefault(e => e.EntertainerId == entertainerId);
+        }
+
+        public void UpdateEntertainer(Entertainer entertainer)
+        {
+            _context.Update(entertainer);  // Simplified update using DbContext.Update()
         }
     }
 }
